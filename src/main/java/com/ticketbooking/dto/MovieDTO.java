@@ -1,13 +1,27 @@
 package com.ticketbooking.dto;
 
+import jakarta.validation.constraints.NotBlank;
+
 public class MovieDTO {
 
     private int movieId;
+    
+    @NotBlank(message = "Movie name cannot be blank")
     private String movieName;
+    
+    @NotBlank(message = "Movie genre cannot be blank")
     private String movieGenre;
+    
+    @NotBlank(message = "Movie hours cannot be blank")
     private String movieHours;
+    
+    @NotBlank(message = "Movie Language cannot be blank")
     private String movieLanguage;
+    
+    @NotBlank(message = "Movie year cannot be blank")
     private int year;
+    
+    @NotBlank(message = "Movie Descryption cannot be blank")
     private String movieDescription;
 
     public MovieDTO() {
